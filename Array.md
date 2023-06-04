@@ -157,3 +157,26 @@ var isAnagram = function(s, t) {
     else return false
 };
 ```
+### Given an integer num, repeatedly add all its digits until the result has only one digit, and return it
+```
+var addDigits = function(num) {
+    while(num >= 10) {
+        let sum = 0
+        while (num > 0) {
+            sum += num % 10
+            num = Math.floor(num / 10)
+        }
+        num = sum
+    }
+    return num
+};
+```
+```
+var addDigits = function(num) {
+  if (num === 0) {
+    return 0;
+  } else {
+    return 1 + (num - 1) % 9;
+  }
+};
+```
