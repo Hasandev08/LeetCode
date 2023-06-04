@@ -100,3 +100,17 @@ var containsDuplicate = function(nums) {
     return false
 };
 ```
+### You are given an integer array nums. Let product be the product of all values in the array nums. Return signFunc(product).
+```
+var arraySign = function(nums) {
+    let product = nums[0]
+
+    for (let i = 1; i < nums.length; i++) {
+        product = product * nums[i]    
+    }
+
+    const sign = Math.sign(product)
+
+    return sign
+};
+```
