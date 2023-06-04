@@ -85,3 +85,18 @@ var isPalindrome = function(x) {
     else return false
 };
 ```
+### Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct
+```
+var containsDuplicate = function(nums) {
+    const hashMap = new Map()
+
+    for (let i = 0; i < nums.length; i++) {
+        if (hashMap.has(nums[i])) {
+            return true
+        }
+        hashMap.set(nums[i], i)
+    }
+
+    return false
+};
+```
