@@ -67,3 +67,21 @@ function isValid(str) {
   return stack.length === 0; 
 }
 ```
+### Given an integer x, return true if x is a palindrome, and false otherwise.
+```
+var isPalindrome = function(x) {
+    if(x <= 0 || x % 10 == 0) return false
+
+    let reversed = 0
+    let original = x
+
+    while (original > 0) {
+        const digit = original % 10
+        reversed = reversed * 10 + digit
+        original = Math.floor(original / 10)
+    }
+
+    if (x === reversed) return true
+    else return false
+};
+```
